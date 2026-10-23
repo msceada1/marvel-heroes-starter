@@ -1,0 +1,21 @@
+{
+  "@@locale": "en",
+  "catalog": "Catalog",
+  "favorites": "Favorites",
+  "search": "Search by name",
+  "details": "View details",
+  "addFavorite": "Add to favorites",
+  "removeFavorite": "Remove favorite",
+  "back": "Back",
+  "cancel": "Cancel",
+  "remove": "Remove",
+  "confirmTitle": "Quitar favorito",
+  "confirmMessage": "¿Quieres quitar este héroe de favoritos?",
+  "noFavorites": "Todavía no tienes favoritos.",
+  "noResults": "No hay resultados.",
+  "pending": "Complete the favorites challenge.",
+  "about": "About",
+  "memoryNote": "Favorites are kept only during this run.",
+  "power": "Power",
+  "intelligence": "Intelligence"
+}
