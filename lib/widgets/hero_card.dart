@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import '../model/hero_item.dart';
 import '../l10n/app_localizations.dart';
+import 'hero_stats.dart';
 // R1: incorpora un HeroStats reutilizable para mostrar poder e inteligencia.
 class HeroCard extends StatelessWidget {
   const HeroCard({super.key, required this.hero, required this.favorite,
-    required this.onOpen, required this.onFavorite});
+    required this.onOpen, required this.onFavorite, required this.heroStats});
   final HeroItem hero;
   final bool favorite;
   final VoidCallback onOpen;
   final VoidCallback onFavorite;
+  final HeroStats heroStats;
   @override
   Widget build(BuildContext context) {
     final t = AppLocalizations.of(context)!;
