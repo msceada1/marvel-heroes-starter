@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvel_heroes/widgets/hero_stats.dart';
 import '../data/heroes.dart';
 import '../model/hero_item.dart';
 import '../widgets/hero_card.dart';
@@ -117,6 +118,10 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                     favorite: _favorites.contains(hero.id),
                                     onOpen: () => _open(hero),
                                     onFavorite: () => _changeFavorite(hero),
+                                    heroStats: HeroStats(
+                                      power: hero.power,
+                                      intelligence: hero.intelligence,
+                                    ),
                                   ),
                                 ),
                             ],
