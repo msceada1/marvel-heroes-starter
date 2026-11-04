@@ -29,6 +29,33 @@ class _CatalogScreenState extends State<CatalogScreen> {
     ScaffoldMessenger.of(
       context,
     ).showSnackBar(SnackBar(content: Text(t.pending)));
+
+    if (_favorites.contains(hero.id)) {
+      final borrar = await showDialog<bool>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            content: Text(t.confirmMessage),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context, false),
+                child: Text(t.cancel),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pop(context, true),
+                child: Text(t.remove),
+              ),
+            ],
+          );
+        },
+      );
+      if(borrar == true) {
+        _favorites.remove(hero.id);
+      }
+
+    } else {
+      _favorites.add(hero.id);
+    }
   }
 
   Future<void> _open(HeroItem hero) async {
