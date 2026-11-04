@@ -18,6 +18,12 @@ class DetailScreen extends StatelessWidget {
             Text(hero.description, style: Theme.of(context).textTheme.bodyLarge),
             const SizedBox(height: 12),
             // R1_DETAIL
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              Text('${AppLocalizations.of(context)!.power}:  ${hero.power}'),
+              Text('${AppLocalizations.of(context)!.intelligence}:  ${hero.intelligence}')
+            ],),
             const SizedBox(height: 12),
             FilledButton.icon(key: const ValueKey('detail-action'),
               onPressed: () => Navigator.pop(context, true),
