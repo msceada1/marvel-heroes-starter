@@ -58,6 +58,12 @@ class HeroCard extends StatelessWidget {
                   onPressed: onFavorite,
                   icon: Icon(favorite ? Icons.favorite : Icons.favorite_border),
                 ),
+                Wrap(
+                  children: [
+                    Chip(label: Text('${AppLocalizations.of(context)!.power}: ${hero.power}')),
+                    Chip(label: Text('${AppLocalizations.of(context)!.intelligence}: ${hero.intelligence}')),
+                  ],
+                ),
               ],
             ),
           ),
