@@ -71,6 +71,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
     );
     if (!mounted || changed != true) return;
     // R3: aplicar la intención devuelta por el detalle.
+    _changeFavorite(hero);
   }
 
   @override
