@@ -71,11 +71,14 @@ class _CatalogScreenState extends State<CatalogScreen> {
     );
     if (!mounted || changed != true) return;
     // R3: aplicar la intención devuelta por el detalle.
-    if (_favorites.contains(hero.id)) {
-      _favorites.remove(hero.id);
-    } else {
-      _favorites.add(hero.id);
-    }
+    setState(() {
+      if (_favorites.contains(hero.id)) {
+        _favorites.remove(hero.id);
+      } else {
+        _favorites.add(hero.id);
+      }
+    });
+
   }
 
   @override
