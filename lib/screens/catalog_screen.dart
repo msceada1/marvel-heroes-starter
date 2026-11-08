@@ -52,10 +52,9 @@ class _CatalogScreenState extends State<CatalogScreen> {
           );
         },
       );
-      if(borrar == true) {
+      if (borrar == true) {
         _favorites.remove(hero.id);
       }
-
     } else {
       _favorites.add(hero.id);
     }
@@ -78,7 +77,6 @@ class _CatalogScreenState extends State<CatalogScreen> {
         _favorites.add(hero.id);
       }
     });
-
   }
 
   @override
